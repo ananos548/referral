@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "ccba0c8b-227b-481b-93ad-5086a4dfa999",
+		"name": "Referral System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44259813",
+		"_collection_link": "https://maksim-2330682.postman.co/workspace/Maksim's-Workspace~46510cd5-6c94-43b0-82b1-5ebf1319f1b5/collection/44259813-ccba0c8b-227b-481b-93ad-5086a4dfa999?action=share&source=collection_link&creator=44259813"
+	},
+	"item": [
+		{
+			"name": "All records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://194.26.138.178/api/profile/",
+					"protocol": "http",
+					"host": [
+						"194",
+						"26",
+						"138",
+						"178"
+					],
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "jKVWXXSSnc0Bxf1diTDhC6Qhhcqf9ZJW",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "csrftoken=jKVWXXSSnc0Bxf1diTDhC6Qhhcqf9ZJW",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://194.26.138.178/api/profile/login/",
+					"protocol": "http",
+					"host": [
+						"194",
+						"26",
+						"138",
+						"178"
+					],
+					"path": [
+						"api",
+						"profile",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+123456789",
+							"type": "text"
+						},
+						{
+							"key": "auth_code",
+							"value": "5253",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://194.26.138.178/api/profile/verify/",
+					"protocol": "http",
+					"host": [
+						"194",
+						"26",
+						"138",
+						"178"
+					],
+					"path": [
+						"api",
+						"profile",
+						"verify",
+						""
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "14",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "1934",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invite_code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+11111",
+							"type": "text"
+						},
+						{
+							"key": "invite_code",
+							"value": "AOepVQ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://138.124.35.59:8010/profile/activate_invite_code/",
+					"protocol": "http",
+					"host": [
+						"138",
+						"124",
+						"35",
+						"59"
+					],
+					"port": "8010",
+					"path": [
+						"profile",
+						"activate_invite_code",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://194.26.138.178/api/profile/14",
+					"protocol": "http",
+					"host": [
+						"194",
+						"26",
+						"138",
+						"178"
+					],
+					"path": [
+						"api",
+						"profile",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
